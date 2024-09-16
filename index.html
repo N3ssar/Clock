@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nassar's Clock</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    <!-- Icon -->
+    <link rel="shortcut icon" href="clock-two-svgrepo-com.svg" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <button id="toggleMode" class="mode-toggle" aria-label="Toggle Day/Night Mode">☀️</button>
+    <div class="clock-container">
+        <div class="clock" aria-label="N3ssar Wall Clock">
+            <div class="brand">Nassar</div>
+            <div class="hand hour" aria-hidden="true"></div>
+            <div class="hand minute" aria-hidden="true"></div>
+            <div class="hand second" aria-hidden="true"></div>
+            <div class="center-dot" aria-hidden="true"></div>
+        </div>
+        <div id="digitalTime" aria-live="polite"></div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>

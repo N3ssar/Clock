@@ -1,0 +1,120 @@
+:root {
+    --bg-color: #f0f0f0;
+    --clock-bg: #fff;
+    --text-color: #333;
+    --hand-color: #333;
+    --second-hand-color: #e74c3c;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s;
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: var(--clock-bg);
+    border: 10px solid var(--clock-border);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.brand {
+    font-size: .7rem;
+    font-family: "Playwrite CU", cursive;
+    font-weight: 500;
+    position: absolute;
+    color: var(--text-color);
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 20px;
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    background-color: var(--hand-color);
+    transition: background-color 0.3s;
+}
+
+.hour {
+    width: 6px;
+    height: 60px;
+    margin-left: -3px;
+}
+
+.minute {
+    width: 4px;
+    height: 80px;
+    margin-left: -2px;
+}
+
+.second {
+    width: 2px;
+    height: 90px;
+    margin-left: -1px;
+    background-color: var(--second-hand-color);
+}
+
+.center-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--second-hand-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+    transform: translate(-50%, -50%);
+}
+
+#digitalTime {
+    font-size: 24px;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.dark-mode {
+    --bg-color: #1a1a1a;
+    --clock-bg: #333;
+    --text-color: #f0f0f0;
+    --hand-color: #f0f0f0;
+}
